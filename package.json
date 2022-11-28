@@ -1,0 +1,18 @@
+{
+  "name": "eslint-plugin-angel-mobile",
+  "version": "1.0.0",
+  "description": "Custom Es lint rules for angel mobile",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "dependencies": {
+    "eslint": "^8.27.0",
+    "jest": "^29.3.1"
+  }
+}
