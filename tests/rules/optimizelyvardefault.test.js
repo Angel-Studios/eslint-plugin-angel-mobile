@@ -1,7 +1,7 @@
 'use strict';
 
 const RuleTester = require('eslint').RuleTester;
-const rule = require('../../lib/rules/optimizelydefaultreq');
+const rule = require('../../lib/rules/optimizelyvardefault');
 
 const ruleTester = new RuleTester({
   parserOptions: {
@@ -31,7 +31,7 @@ const invalidStatements = [
 `,
 ];
 
-ruleTester.run('optimizelydefaultreq', rule, {
+ruleTester.run('optimizelyvardefault', rule, {
   valid: [
     { code: validStatements[0] },
     { code: validStatements[1] },

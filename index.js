@@ -1,7 +1,7 @@
 'use strict';
 
 const rules = {
-  optimizelyreqs: require('./lib/rules/optimizelyreqs'),
+  optimizelyvardefault: require('./lib/rules/optimizelyvardefault'),
   optimizelyexpreq: require('./lib/rules/optimizelyexpreq'),
 };
 
