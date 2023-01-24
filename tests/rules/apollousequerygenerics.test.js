@@ -16,6 +16,7 @@ const ruleTester = new RuleTester({
 
 const validStatements = [
     `const a = useQuery<GraphQuery, QueryTypeVariables>()`,
+    `import { gql, useQuery, useReactiveVar } from '@apollo/client'`
 ];
 
 const invalidStatements = [
@@ -26,6 +27,7 @@ const invalidStatements = [
 ruleTester.run('apollousequerygenerics', rule, {
     valid: [
         { code: validStatements[0] },
+        { code: validStatements[1] },
     ],
     invalid: [
         { code: invalidStatements[0], errors: [{ messageId: 'genericsrequired' }] },
