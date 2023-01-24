@@ -22,6 +22,9 @@ const validStatements = [
 const invalidStatements = [
     `const a = useQuery()`,
     `const a = useQuery<GraphQuery>()`,
+    `const { data, refetch } = useQuery(AVATAR_HEADER_HOOK_QUERY, {skip: !isLoggedInVar})`,
+    `const { data, refetch } = useQuery<GraphQuery>(AVATAR_HEADER_HOOK_QUERY, {skip: !isLoggedInVar})`
+
 ];
 
 ruleTester.run('apollousequerygenerics', rule, {
@@ -32,5 +35,7 @@ ruleTester.run('apollousequerygenerics', rule, {
     invalid: [
         { code: invalidStatements[0], errors: [{ messageId: 'genericsrequired' }] },
         { code: invalidStatements[1], errors: [{ messageId: 'variablestyperequired' }] },
+        { code: invalidStatements[2], errors: [{ messageId: 'genericsrequired' }] },
+        { code: invalidStatements[3], errors: [{ messageId: 'variablestyperequired' }] },
     ],
 });
