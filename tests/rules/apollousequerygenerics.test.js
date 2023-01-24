@@ -9,7 +9,7 @@ const ruleTester = new RuleTester({
         ecmaVersion: 2018,
         sourceType: 'module',
         ecmaFeatures: {
-            jsx: false,
+            jsx: true,
         },
     },
 });
